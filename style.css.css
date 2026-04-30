@@ -19,20 +19,20 @@
 
 #container{
   background: url('me.jpeg');
-  background-position:center;
-  background-size:cover;
+  background-position: top center; /* Focuses on your face */
+  background-size: cover;
   background-attachment: fixed;
-  height:200vh;
-  width:100%;
+  height: 200vh;
+  width: 100%;
   }
 
   #page{
     background: url('me.jpeg');
-    background-position:center;
-    background-size:cover;
+    background-position: top center; /* Focuses on your face */
+    background-size: cover;
     background-attachment: fixed;
-    height:150vh;
-    width:100%;
+    height: 150vh;
+    width: 100%;
     }
   
     /flexBox with-in the About page/
@@ -84,7 +84,7 @@ padding-top: 164px;}
       font-size:20px;
       color:white;
       float:right;
-      background-color:burlywood;
+      background-color: rgba(139, 69, 19, 0.7); /* Burlywood with transparency to see face */
       width:40%;
       border-radius:28px;
       margin-right:1%;
@@ -175,7 +175,7 @@ padding-top: 164px;}
     clear:both;
     }
     
-    #footor{
+    #footor p{
     text-align:center;
     padding-top:14px;
     }
