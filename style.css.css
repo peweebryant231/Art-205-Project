@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    overflow-x: hidden;
+    line-height: 1.6;
 }
 
 /* Menu style - Sticky at the top */
@@ -68,7 +68,7 @@ body {
 .hero-overlay h1 {
     font-size: 3rem;
     color: aqua;
-    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 /* About / Showcase Area */
@@ -87,7 +87,6 @@ body {
     border: 2px solid burlywood;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .wepic1 {
@@ -125,11 +124,6 @@ body {
     background: aqua;
 }
 
-.skill-card i {
-    margin-bottom: 15px;
-    color: #333;
-}
-
 /* Video Gallery */
 .video-gallery {
     padding: 60px 20px;
@@ -162,21 +156,22 @@ body {
     border-top: 5px solid black;
 }
 
-.social-icons {
+.social-links {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-.social-icons a {
+.social-links a {
     color: black;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
-.social-icons a:hover {
+.social-links a:hover {
     color: white;
-    transform: scale(1.3) rotate(5deg);
+    transform: scale(1.3);
 }
 
 #footor p {
