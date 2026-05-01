@@ -1,236 +1,189 @@
-<!Doctype html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="starz.css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pewee P. Bryant | CEO & Content Creator</title>
+    <meta name="description" content="Official portfolio of Pewee P. Bryant. CEO of XTREMEBROTHERS, IT professional, and content creator.">
+    <meta name="google-site-verification" content="google6eb6c0f6e77bad6f" />
+
+    <meta property="og:title" content="Pewee P. Bryant Portfolio">
+    <meta property="og:description" content="CEO of XTREMEBROTHERS | IT Student at STARZ UNIVERSITY">
+    <meta property="og:image" content="me.jpeg">
+    <meta property="og:url" content="https://peweebryant231.github.io/Art-205-Project/">
+
+    <link rel="stylesheet" type="text/css" href="starz.css.css">
+
+    <style>
+        /* Professional Reset & Body */
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; }
+
+        /* Menu style */
+        .menu {
+            background-color: aqua;
+            overflow: hidden; 
+            border-left: solid thick black; 
+            border-right: solid thick black;
+            border-bottom: solid thick black; 
+            border-bottom-left-radius: 2rem; 
+            border-bottom-right-radius: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .menu a {
+            text-decoration: none;
+            float: left; 
+            display: block; 
+            padding: 16px 20px; 
+            font-size: 20px; 
+            text-transform: uppercase; 
+            color: black; 
+            font-weight: bold; 
+        }     
+        .menu a:hover { background-color: white; color: blue; }     
+
+        /* Hero Background Fix (Shows your face) */
+        #container {
+            background: url('me.jpeg');
+            background-position: center top; /* Critical fix for your photo */
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid aqua;
+        }
+
+        /* Showcase / About Area */
+        .showcase {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+            background: white;
+        }
+
+        .box1 figure {
+            background-color: white;
+            padding: 15px;
+            border: 2px solid burlywood;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .wepic1 {
+            height: 15rem;
+            width: auto;
+            border-radius: 10px;
+        }
+
+        /* Skills Section (Grand/Professional) */
+        .skills-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: #e0fbfc;
+        }
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .skill-card {
+            background: burlywood;
+            padding: 20px;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Video Section */
+        .video-gallery { padding: 50px 20px; text-align: center; }
+        .video-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .video-card { background: #222; padding: 10px; border-radius: 10px; width: 320px; border: 2px solid aqua; color: white; }
+
+        /* Footer Fix */
+        #footor {
+            background: aqua;
+            padding: 30px 0;
+            text-align: center;
+            width: 100%;
+            margin-top: 50px;
+            border-top: solid thick black;
+        }
+        #footor b { color: black; }
+    </style>
 </head>
- <body>
-   <div id="container">
-  <header>
-  <div class="menu">
-    <a href="index.html">Home</a>
-    <a href="peko2.html">About ME</a>
-    <a href="peko3contact.html">Contact  ME</a>
- </div>
- 
- <style>
+<body>
 
-/*menu style*/
-.menu{background-color: aqua;
-    overflow: hidden; border-left: solid thick black; border-right: solid thick black;
-    border-bottom: solid thick black; border-bottom-left-radius: 2rem; border-bottom-right-radius: 2rem;
-      }
-.menu a:hover{
-   color: blue;
- }     
-.menu a{text-decoration: none;
-         float: left; display: block; padding:16px 14px; 
-         font-size: 24px; text-transform: uppercase; 
-          color: black; font-weight: bold; }     
-        
- .quote{font-size: 20px; float: left; background-color:black; color: white; border-bottom-right-radius: 2rem; 
- border-bottom-left-radius: 2rem; border-top-right-radius: 2rem; border-top-left-radius: 2rem;}  
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">My Work</a>
+        <a href="peko3contact.html">Contact Me</a>
+    </div>
 
- .image{font-size: 20px; float: left; border-bottom-right-radius: 2rem; 
-  border-bottom-left-radius: 2rem; border-top-right-radius: 2rem; border-top-left-radius: 2rem;}  
+    <div id="container">
+        <div class="hero-overlay">
+            <h1>PEWEE P. BRYANT</h1>
+            <p>CEO of XTREMEBROTHERS | IT Professional</p>
+        </div>
+    </div>
 
-#container{
-  background: url('../Images/church4.jpg');
-  background-position:center;
-  background-size:cover;
-  height:150vh;
-  width:100%;
-  }
+    <h1 style="text-align:center; margin-top: 40px;"><b><u>ART 205 FINAL-PROJECT</u></b></h1>
 
-  #page{
-    background: url('../Images/church4.jpg');
-    background-position:center;
-    background-size:cover;
-    height:250px;
-    width:600px;
-    }
-  
-    /*flexBox with-in the About page*/
-.showcase{
-  display:flex;
-justify-content:space-around;
-flex-wrap:wrap;
-padding-top: 164px;}
+    <section id="about" class="showcase">
+        <div class="box1">
+            <figure>
+                <img class="wepic1" src="me.jpeg">
+                <figcaption>
+                    <br><b>ID #: 8595</b><br> 
+                    Email: <a href="mailto:pekobryant942@gmail.com">pekobryant942@gmail.com</a><br>
+                    Contact: +231778675965 / +231888756909
+                </figcaption>
+            </figure>
+        </div>
+        <div style="max-width: 500px; font-size: 22px; line-height: 1.6; padding: 20px;">
+            <p>"WELCOME TO MY CREATIVE WORLD WHERE IDEAS TAKE SHAPE, COLORS SPEAK, AND CREATIVITY KNOWS NO LIMITS. DIVE IN, EXPLORE, AND LET THE ART TELL ITS STORY."</p>
+        </div>
+    </section>
 
-  
-/*FlexBoxes Images in the about page*/
-.wepic{
-  height:9rem;
-  width:9rem;
-  }
-  
-  .wepic1{
-  height:11rem;
-  width:13.1rem;
-  }
-  
-  .wepic2{
-  height:11rem;
-  width:11.5rem;
-  }
-  
-  .wepic3{
-  height:10rem;
-  width:11.5rem;
-  }
-  
-  .wepic4{
-  height:11rem;
-  width:11.5rem;
-  }
-  
-  figure{
-  background-color:white;
-  padding:2px;
-  }
+    <section id="skills" class="skills-section">
+        <h2>PROFESSIONAL EXPERTISE</h2>
+        <div class="skills-container">
+            <div class="skill-card"><h3>IT Specialist</h3><p>Starz University Administration focus.</p></div>
+            <div class="skill-card"><h3>CEO Leadership</h3><p>Executive Management at XTREMEBROTHERS.</p></div>
+            <div class="skill-card"><h3>Media Production</h3><p>Digital Content & Video Editing.</p></div>
+        </div>
+    </section>
 
-    .content{
-      padding-top:10px;
-      padding-bottom:25px;
-      padding-left:25px;
-      line-spacing:1.2px;
-      font-family:arial;
-      line-height:25px;
-      font-size:20px;
-      color:black;
-      float:right;
-      background-color:burlywood;
-      width:40%;
-      border-radius:28px;
-      margin-right:1%;
-      margin-top: 100px;
-      }
+    <section id="work" class="video-gallery">
+        <h2>FEATURED PRODUCTIONS</h2>
+        <div class="video-container">
+            <div class="video-card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+                <p>XTREMEBROTHERS Highlights</p>
+            </div>
+        </div>
+    </section>
 
-       /*flexBox with-in the About page*/
-.showcase1{
-  display:flex;
-justify-content:space-around;
-flex-wrap:wrap;
-padding-top: 164px;}
-
-  
-/*FlexBoxes Images in the about page*/
-.wepic{
-  height:9rem;
-  width:9rem;
-  }
-  
-  .wepic1{
-  height:11rem;
-  width:13.1rem;
-  }
-  a
-  .wepic2{
-  height:11rem;
-  width:11.5rem;
-  }
-  
-  .wepic3{
-  height:10rem;
-  width:11.5rem;
-  }
-  
-  .wepic4{
-  height:11rem;
-  width:11.5rem;
-  }
-  
-  figure{
-  background-color:white;
-  padding:2px;
-  }
-
-/*botton in home page*/
-.btn{
-  height:6px;
-  width:20px;
-  background:aqua;
-  border:none;
-  border-radius:2rem;
-  padding:20px;
-  cursor:pointer;
-  transition:.3s ease;
-  margin-left:34px;
-  }
-  
-  .btn a{
-  text-decoration:none;
-  color:black;
-  font-family:Arial;
-  }
-  .btn:hover{
-    background-color:white;
-    }
-
-    /*Footer section*/
-#footer{
-  background:aqua;
-  height:129px;
-  width:100%;
-  margin-top:700px;
-  position:relative;
-  clear:both;
-  }
-  
-  #footer p{
-  text-align:center;
-  padding-top:14px;
-  }
-  #footor{
-    background:aqua;
-    height:129px;
-    width:100%;
-    margin-top:300px;
-    position:relative;
-    clear:both;
-    }
-    
-    #footor{
-    text-align:center;
-    padding-top:14px;
-    }
-  
-
-
-
-
-
-
-
- </style>
-
-
-
-  </header>
-
-   <h1><center><b><u>ART 205 FINAL-PROJECT </u></b></center></h1>
-
-  <div class="showcase">
-    <div class="box1"><figure><img class="wepic1" src="me.jpeg">
-                            <figcaption><b>PEWEE P. BRYANT</b>  <br><b> ID #: 8595
-                 </b><br> Email:<a href="pekobryant942@gmail.com">pekobryant942@gmail.com</a> 
-                  <br>Contact:+231778675965 / +231888756909</figcaption></figure></div>
-                  <p>   
-                    " WELCOME TO MY CREATIVE WORLD WHERE IDEAS TAKES SHAPE , <br>COLORS SPEAK, AND CREATIVITY KNOWS NO LIMIT,DIVE IN , <br>EXPLORE , AND LET THE ARTS TELL IT'S STORY.       
-                    
-                    "                                    
-                  </p>
-
-        
-    
-  </div>	
-
-<!--footer-->
-<footer id="footor">
-  <p class="foot"><center>Copyright © <br> 2024-2025  <b>PEWEE P. BRYANT</b> . All rights reserved..</center></font>
-       </footer>
-
-  
- 
-    
+    <footer id="footor">
+        <p>Copyright © 2024-2025 <b>PEWEE P. BRYANT</b>. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
