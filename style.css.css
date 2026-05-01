@@ -1,181 +1,191 @@
-/menu style/
-.menu{background-color: aqua;
-    overflow: hidden; border-left: solid thick black; border-right: solid thick black;
-    border-bottom: solid thick black; border-bottom-left-radius: 2rem; border-bottom-right-radius: 2rem;
-      }
-.menu a:hover{
-   color: blue;
- }     
-.menu a{text-decoration: none;
-         float: left; display: block; padding:16px 14px; 
-         font-size: 24px; text-transform: uppercase; 
-          color: black; font-weight: bold; }     
-        
- .quote{font-size: 20px; float: left; background-color:black; color: white; border-bottom-right-radius: 2rem; 
- border-bottom-left-radius: 2rem; border-top-right-radius: 2rem; border-top-left-radius: 2rem;}  
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- .image{font-size: 50px; float: left; border-bottom-right-radius: 4rem; 
-  border-bottom-left-radius: 4rem; border-top-right-radius: 4rem; border-top-left-radius: 4rem;}  
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
 
-#container{
-  background: url('me.jpeg');
-  background-position: top center; /* Focuses on your face */
-  background-size: cover;
-  background-attachment: fixed;
-  height: 200vh;
-  width: 100%;
-  }
+/* Menu style */
+.menu {
+    background-color: aqua;
+    overflow: hidden; 
+    border-left: solid thick black; 
+    border-right: solid thick black;
+    border-bottom: solid thick black; 
+    border-bottom-left-radius: 2rem; 
+    border-bottom-right-radius: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-  #page{
+.menu a {
+    text-decoration: none;
+    float: left; 
+    display: block; 
+    padding: 16px 20px; 
+    font-size: 20px; 
+    text-transform: uppercase; 
+    color: black; 
+    font-weight: bold; 
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: blue;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hero Background Section (The "Grand" Look) */
+#container {
     background: url('me.jpeg');
-    background-position: top center; /* Focuses on your face */
+    background-position: center top; /* Focuses on your face */
     background-size: cover;
     background-attachment: fixed;
-    height: 150vh;
+    height: 100vh;
     width: 100%;
-    }
-  
-    /flexBox with-in the About page/
-.showcase{
-  display:flex;
-justify-content:space-around;
-flex-wrap:wrap;
-padding-top: 164px;}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-  
-/FlexBoxes Images in the about page/
-.wepic{
-  height:20rem;
-  width:25rem;
-  }
-  
-  .wepic1{
-  height:25rem;
-  width:30.1rem;
-  }
-  
-  .wepic2{
-  height:11rem;
-  width:11.5rem;
-  }
-  
-  .wepic3{
-  height:10rem;
-  width:11.5rem;
-  }
-  
-  .wepic4{
-  height:11rem;
-  width:11.5rem;
-  }
-  
-  figure{
-  background-color:white;
-  padding:2px;
-  }
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Dark tint to make text pop */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid aqua;
+    max-width: 80%;
+}
 
-    .content{
-      padding-top:10px;
-      padding-bottom:25px;
-      padding-left:25px;
-      line-spacing:1.2px;
-      font-family:arial;
-      line-height:25px;
-      font-size:20px;
-      color:white;
-      float:right;
-      background-color: rgba(139, 69, 19, 0.7); /* Burlywood with transparency to see face */
-      width:40%;
-      border-radius:28px;
-      margin-right:1%;
-      margin-top: 100px;
-      }
+.hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: aqua;
+}
 
-       /flexBox with-in the About page/
-.showcase1{
-  display:flex;
-justify-content:space-around;
-flex-wrap:wrap;
-padding-top: 164px;}
+/* Showcase Section */
+.showcase {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 80px 20px;
+    background: white;
+}
 
-  
-/FlexBoxes Images in the about page/
-.wepic{
-  height:9rem;
-  width:9rem;
-  }
-  
-  .wepic1{
-  height:11rem;
-  width:13.1rem;
-  }
+.wepic1 {
+    height: auto;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 
-  .wepic2{
-  height:11rem;
-  width:11.5rem;
-  }
-  
-  .wepic3{
-  height:10rem;
-  width:11.5rem;
-  }
-  
-  .wepic4{
-  height:11rem;
-  width:11.5rem;
-  }
-  
-  figure{
-  background-color:white;
-  padding:2px;
-  }
+figure {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
 
-/botton in home page/
-.btn{
-  height:6px;
-  width:20px;
-  background:aqua;
-  border:none;
-  border-radius:2rem;
-  padding:20px;
-  cursor:pointer;
-  transition:.3s ease;
-  margin-left:34px;
-  }
-  
-  .btn a{
-  text-decoration:none;
-  color:black;
-  font-family:Arial;
-  }
-  .btn:hover{
-    background-color:white;
-    }
+/* Professional Skills Section */
+.skills-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #e0fbfc;
+}
 
-    /Footer section/
-#footer{
-  background:aqua;
-  height:129px;
-  width:100%;
-  margin-top:700px;
-  position:relative;
-  clear:both;
-  }
-  
-  #footer p{
-  text-align:center;
-  padding-top:14px;
-  }
-  #footor{
-    background:aqua;
-    height:129px;
-    width:100%;
-    margin-top:300px;
-    position:relative;
-    clear:both;
-    }
-    
-    #footor p{
-    text-align:center;
-    padding-top:14px;
-    }
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    background: burlywood;
+    padding: 30px;
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: aqua;
+}
+
+.skill-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Video Gallery Section */
+.video-gallery {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.video-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 15px;
+    width: 350px;
+    border: 2px solid aqua;
+    color: white;
+}
+
+/* Footer Section */
+#footor {
+    background: aqua;
+    padding: 40px 0;
+    width: 100%;
+    margin-top: 50px;
+    border-top: 5px solid black;
+    text-align: center;
+}
+
+#footor p {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Button style */
+.btn {
+    display: inline-block;
+    background: aqua;
+    border: none;
+    border-radius: 2rem;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
