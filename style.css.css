@@ -6,13 +6,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
+    overflow-x: hidden;
 }
 
-/* Menu style */
+/* Menu style - Sticky at the top */
 .menu {
     background-color: aqua;
     overflow: hidden; 
@@ -31,22 +30,22 @@ body {
     float: left; 
     display: block; 
     padding: 16px 20px; 
-    font-size: 20px; 
+    font-size: 18px; 
     text-transform: uppercase; 
     color: black; 
     font-weight: bold; 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .menu a:hover {
+    background-color: white; 
     color: blue;
-    background-color: rgba(255, 255, 255, 0.3);
-}
+}     
 
-/* Hero Background Section (The "Grand" Look) */
+/* Hero Section - Fixed background showing your face */
 #container {
     background: url('me.jpeg');
-    background-position: center top; /* Focuses on your face */
+    background-position: center top; 
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -57,22 +56,22 @@ body {
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.6); /* Dark tint to make text pop */
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 40px;
     text-align: center;
     border-radius: 20px;
     border: 2px solid aqua;
-    max-width: 80%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .hero-overlay h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
     color: aqua;
+    letter-spacing: 2px;
 }
 
-/* Showcase Section */
+/* About / Showcase Area */
 .showcase {
     display: flex;
     justify-content: space-around;
@@ -82,22 +81,22 @@ body {
     background: white;
 }
 
-.wepic1 {
-    height: auto;
-    width: 300px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-figure {
+.box1 figure {
     background-color: white;
     padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 2px solid burlywood;
+    border-radius: 15px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Professional Skills Section */
+.wepic1 {
+    height: 18rem;
+    width: auto;
+    border-radius: 10px;
+}
+
+/* Skills Section */
 .skills-section {
     padding: 60px 20px;
     text-align: center;
@@ -117,8 +116,8 @@ figure {
     padding: 30px;
     width: 280px;
     border-radius: 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
 .skill-card:hover {
@@ -126,12 +125,12 @@ figure {
     background: aqua;
 }
 
-.skill-card h3 {
+.skill-card i {
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    color: #333;
 }
 
-/* Video Gallery Section */
+/* Video Gallery */
 .video-gallery {
     padding: 60px 20px;
     text-align: center;
@@ -142,7 +141,6 @@ figure {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    margin-top: 30px;
 }
 
 .video-card {
@@ -154,38 +152,34 @@ figure {
     color: white;
 }
 
-/* Footer Section */
+/* Footer & Social Icons */
 #footor {
     background: aqua;
     padding: 40px 0;
+    text-align: center;
     width: 100%;
     margin-top: 50px;
     border-top: 5px solid black;
-    text-align: center;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icons a {
+    color: black;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.3) rotate(5deg);
 }
 
 #footor p {
-    font-size: 18px;
     font-weight: bold;
-    color: black;
-}
-
-/* Button style */
-.btn {
-    display: inline-block;
-    background: aqua;
-    border: none;
-    border-radius: 2rem;
-    padding: 12px 30px;
-    cursor: pointer;
-    transition: .3s ease;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.btn:hover {
-    background-color: white;
-    transform: scale(1.05);
+    font-size: 1.1rem;
 }
