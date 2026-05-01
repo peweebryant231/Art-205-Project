@@ -8,6 +8,8 @@
     <meta name="description" content="Official portfolio of Pewee P. Bryant. CEO of XTREMEBROTHERS, IT professional, and content creator.">
     <meta name="google-site-verification" content="google6eb6c0f6e77bad6f" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <meta property="og:title" content="Pewee P. Bryant Portfolio">
     <meta property="og:description" content="CEO of XTREMEBROTHERS | IT Student at STARZ UNIVERSITY">
     <meta property="og:image" content="me.jpeg">
@@ -44,10 +46,10 @@
         }     
         .menu a:hover { background-color: white; color: blue; }     
 
-        /* Hero Background Fix (Shows your face) */
+        /* Hero Background Fix */
         #container {
             background: url('me.jpeg');
-            background-position: center top; /* Critical fix for your photo */
+            background-position: center top; 
             background-size: cover;
             background-attachment: fixed;
             height: 100vh;
@@ -89,7 +91,7 @@
             border-radius: 10px;
         }
 
-        /* Skills Section (Grand/Professional) */
+        /* Skills Section */
         .skills-section {
             padding: 50px 20px;
             text-align: center;
@@ -109,13 +111,14 @@
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
+        .skill-card i { margin-bottom: 10px; color: black; }
 
         /* Video Section */
         .video-gallery { padding: 50px 20px; text-align: center; }
         .video-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .video-card { background: #222; padding: 10px; border-radius: 10px; width: 320px; border: 2px solid aqua; color: white; }
 
-        /* Footer Fix */
+        /* Footer & Social Icons */
         #footor {
             background: aqua;
             padding: 30px 0;
@@ -124,7 +127,21 @@
             margin-top: 50px;
             border-top: solid thick black;
         }
-        #footor b { color: black; }
+        .social-icons {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        .social-icons a {
+            color: black;
+            font-size: 30px;
+            transition: 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: white;
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body>
@@ -152,8 +169,8 @@
                 <img class="wepic1" src="me.jpeg">
                 <figcaption>
                     <br><b>ID #: 8595</b><br> 
-                    Email: <a href="mailto:pekobryant942@gmail.com">pekobryant942@gmail.com</a><br>
-                    Contact: +231778675965 / +231888756909
+                    <i class="fas fa-envelope"></i> <a href="mailto:pekobryant942@gmail.com">Email Me</a><br>
+                    <i class="fas fa-phone"></i> +231778675965
                 </figcaption>
             </figure>
         </div>
@@ -165,9 +182,21 @@
     <section id="skills" class="skills-section">
         <h2>PROFESSIONAL EXPERTISE</h2>
         <div class="skills-container">
-            <div class="skill-card"><h3>IT Specialist</h3><p>Starz University Administration focus.</p></div>
-            <div class="skill-card"><h3>CEO Leadership</h3><p>Executive Management at XTREMEBROTHERS.</p></div>
-            <div class="skill-card"><h3>Media Production</h3><p>Digital Content & Video Editing.</p></div>
+            <div class="skill-card">
+                <i class="fas fa-laptop-code fa-2x"></i>
+                <h3>IT Specialist</h3>
+                <p>Starz University Administration focus.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-user-tie fa-2x"></i>
+                <h3>CEO Leadership</h3>
+                <p>Executive Management at XTREMEBROTHERS.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-video fa-2x"></i>
+                <h3>Media Production</h3>
+                <p>Digital Content & Video Editing.</p>
+            </div>
         </div>
     </section>
 
@@ -175,13 +204,19 @@
         <h2>FEATURED PRODUCTIONS</h2>
         <div class="video-container">
             <div class="video-card">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
                 <p>XTREMEBROTHERS Highlights</p>
             </div>
         </div>
     </section>
 
     <footer id="footor">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/231778675965" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/yourchannel" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
         <p>Copyright © 2024-2025 <b>PEWEE P. BRYANT</b>. All rights reserved.</p>
     </footer>
 
