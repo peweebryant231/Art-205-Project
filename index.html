@@ -19,7 +19,19 @@
 
     <style>
         /* Modern Body Style */
-        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; }
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; overflow-x: hidden; }
+
+        /* --- JAVASCRIPT REVEAL ANIMATION CSS --- */
+        .reveal {
+            position: relative;
+            transform: translateY(80px);
+            opacity: 0;
+            transition: 1.2s all ease;
+        }
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
         /* Menu style */
         .menu {
@@ -46,7 +58,7 @@
         }     
         .menu a:hover { background-color: white; color: blue; }     
 
-        /* Hero Image - Set to show your face */
+        /* Hero Image */
         #container {
             background: url('me.jpeg');
             background-position: center top; 
@@ -156,7 +168,7 @@
 
     <h1 style="text-align:center; margin-top: 40px;"><b><u>ART 205 FINAL-PROJECT</u></b></h1>
 
-    <section id="about" class="showcase">
+    <section id="about" class="showcase reveal">
         <div class="box1">
             <figure>
                 <img class="wepic1" src="me.jpeg">
@@ -172,7 +184,7 @@
         </div>
     </section>
 
-    <section id="skills" class="skills-section">
+    <section id="skills" class="skills-section reveal">
         <h2>PROFESSIONAL EXPERTISE</h2>
         <div class="skills-container">
             <div class="skill-card"><i class="fas fa-laptop-code fa-2x"></i><h3>IT Specialist</h3></div>
@@ -181,20 +193,20 @@
         </div>
     </section>
 
-    <section id="work" class="video-gallery">
+    <section id="work" class="video-gallery reveal">
         <h2>FEATURED PRODUCTIONS</h2>
         <div class="video-container">
             <div class="video-card">
-              <iframe 
-    width="100%" 
-    height="400" 
-   src="https://www.youtube.com/embed/TwQqtWsGD6c"
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-</iframe>
+                <iframe 
+                    width="100%" 
+                    height="400" 
+                    src="https://www.youtube.com/embed/TwQqtWsGD6c"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
                 <p>Tha mask Man 🎬🪄</p>
             </div>
         </div>
@@ -205,10 +217,27 @@
             <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/231778675965" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.youtube.com/@pekobryant9268" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://youtube.com/@PekoBryant" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
         <p>Copyright © 2024-2025 <b>PEWEE P. BRYANT</b>. All rights reserved.</p>
     </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Run once on load to show elements already in view
+        reveal();
+    </script>
 
 </body>
 </html>
