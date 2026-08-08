@@ -8,8 +8,8 @@
     
     <style>
         body {
-            /* Replace 'pewee.jpg' with the exact filename of your saved photo */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('pewee.jpg');
+            /* Fixed background path to match 'me.jpeg' in GitHub */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('me.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -23,11 +23,24 @@
         #container {
             max-width: 800px;
             margin: 0 auto;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             padding: 30px;
             border-radius: 12px;
             backdrop-filter: blur(4px);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Wide Centered Photo Styling */
+        .featured-photo {
+            width: 100%;             /* Stretches wide to fill the container */
+            max-height: 450px;       /* Keeps height balanced */
+            object-fit: cover;       /* Prevents photo distortion */
+            border-radius: 12px;     /* Smooth rounded corners */
+            border: 2px solid #00d2ff; /* Crisp cyan outline */
+            margin: 20px 0;          /* Spacing above and below */
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
         }
 
         a {
@@ -35,7 +48,7 @@
         }
 
         .menu a {
-            margin-right: 15px;
+            margin: 0 12px;
             text-decoration: none;
             font-weight: bold;
         }
@@ -68,6 +81,9 @@
         <h1><i><marquee>PEWEE P. BRYANT</marquee></i></h1>
 
         <div class="content">
+            <!-- Middle Wide Featured Photo -->
+            <img src="me.jpeg" alt="Pewee P. Bryant" class="featured-photo">
+
             <p>
                 I'm PEWEE P. BRYANT, I was born July 24, 2003. <br> 
                 I am a content creator and also a videographer. <br>
