@@ -8,8 +8,8 @@
     
     <style>
         body {
-            /* Full background image setup using pewee.jpegee */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('pewee.jpegee');
+            /* Background image setup using pewee.jpg */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('pewee.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -31,12 +31,11 @@
             text-align: center;
         }
 
-        /* Wide Featured Middle Photo Styling */
+        /* Displays the full picture wide in the center */
         .featured-photo {
-            width: 100%;
-            max-height: 450px;
-            object-fit: cover;
-            border-radius: 12px;
+            width: 100%;             /* Stretches full width of the box */
+            height: auto;            /* Keeps natural image proportions */
+            border-radius: 12px;     /* Rounded edges */
             border: 2px solid #00d2ff;
             margin: 20px 0;
             display: block;
@@ -81,8 +80,8 @@
         <h1><i><marquee>PEWEE P. BRYANT</marquee></i></h1>
 
         <div class="content">
-            <!-- Middle Wide Featured Photo -->
-            <img src="pewee.jpegee" alt="Pewee P. Bryant" class="featured-photo">
+            <!-- Full Center Photo -->
+            <img src="pewee.jpg" alt="Pewee P. Bryant" class="featured-photo">
 
             <p>
                 I'm PEWEE P. BRYANT, I was born July 24, 2003. <br> 
