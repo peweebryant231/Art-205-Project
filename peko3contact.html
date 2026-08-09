@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Pewee P. Bryant</title>
+    <title>Contact Us | Pewee P. Bryant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="starz.css.css">
     
     <style>
         body {
-            /* Background image setup */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('pewee.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('pewee.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -21,86 +21,217 @@
         }
 
         #container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.7);
             padding: 30px;
-            border-radius: 12px;
-            backdrop-filter: blur(4px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
             text-align: center;
         }
 
-        /* Displays the full picture wide in the center */
-        .featured-photo {
-            width: 100%;             /* Stretches full width of the container */
-            height: auto;            /* Keeps natural image proportions */
-            border-radius: 12px;     /* Rounded edges */
-            border: 2px solid #00d2ff;
-            margin: 20px 0;
-            display: block;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-        }
-
-        a {
-            color: #00d2ff;
+        /* Header Navigation */
+        header .menu {
+            margin-bottom: 25px;
         }
 
         .menu a {
+            color: #00d2ff;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
+            margin: 0 15px;
+            transition: color 0.3s;
         }
 
-        .btn {
-            background-color: #00d2ff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+        .menu a:hover {
+            color: #ffffff;
+        }
+
+        .section-title {
+            color: #00d2ff;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            color: #dddddd;
+            margin-bottom: 35px;
+            font-size: 1.05rem;
+        }
+
+        /* Contact Grid Layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            background: rgba(20, 20, 20, 0.85);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 210, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: #00d2ff;
+        }
+
+        .contact-card i {
+            font-size: 2.2rem;
+            color: #00d2ff;
+            margin-bottom: 12px;
+        }
+
+        .contact-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        .contact-card p, .contact-card a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin: 4px 0;
+            display: block;
+        }
+
+        .contact-card a:hover {
+            color: #00d2ff;
+        }
+
+        /* Social Media Section */
+        .social-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-title {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .social-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 25px;
+            text-decoration: none;
             font-weight: bold;
-            cursor: pointer;
-            margin-top: 15px;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
         }
 
-        .btn a {
-            color: #000;
+        .social-btn:hover {
+            background: #00d2ff;
+            color: #000000;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #888888;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
+
     <div id="container">
+        <!-- Navigation Bar -->
         <header>
             <div class="menu">
+                <a href="index.html">Home</a>
                 <a href="peko2.html">About Me</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="peko3contact.html" style="text-decoration: underline;">Contact Us</a>
             </div>
         </header>
 
-        <h1><i><marquee>PEWEE P. BRYANT</marquee></i></h1>
+        <h1 class="section-title">GET IN TOUCH</h1>
+        <p class="section-subtitle">Feel free to reach out for collaborations, IT services, or videography projects.</p>
 
-        <div class="content">
-            <!-- Full Center Photo -->
-            <img src="pewee.jpg" alt="Pewee P. Bryant" class="featured-photo">
+        <!-- Direct Contact Cards -->
+        <div class="contact-grid">
+            
+            <!-- Phone Card -->
+            <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Call Me</h3>
+                <a href="tel:0778675966">0778675966</a>
+                <a href="tel:0888756909">0888756909</a>
+            </div>
 
-            <p>
-                I'm PEWEE P. BRYANT, I was born July 24, 2003. <br> 
-                I am a content creator and also a videographer. <br>
-                Am also the C.E.O of XTREMEBROTHERHOOD ORGANIZATION (Org). <br>
-                A student of STARZ UNIVERSITY, studying INFORMATION Technology (IT) with concentration in SYSTEM ADMINISTRATION. <br>
-                I love being myself when am at work. Currently residing in Caldwell.
-            </p>
+            <!-- WhatsApp Card -->
+            <div class="contact-card">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/231778675965" target="_blank">+231 77 867 5965</a>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Me</h3>
+                <a href="mailto:pekobryant942@gmail.com">pekobryant942@gmail.com</a>
+            </div>
+
         </div>
 
-        <div class="btn-container">
-            <button class="btn">
-                <a href="peko3contact.html" style="text-decoration:none;">VISIT ME Mr. BRYANT</a>
-            </button>
+        <!-- Social Media Profiles Section -->
+        <div class="social-section">
+            <h3 class="social-title">CONNECT ON SOCIAL MEDIA</h3>
+            <div class="social-grid">
+
+                <a href="https://facebook.com" target="_blank" class="social-btn">
+                    <i class="fab fa-facebook-f"></i> Facebook (Peko P. Bryant)
+                </a>
+
+                <a href="https://instagram.com" target="_blank" class="social-btn">
+                    <i class="fab fa-instagram"></i> Instagram (peko .Bryant)
+                </a>
+
+                <a href="https://tiktok.com" target="_blank" class="social-btn">
+                    <i class="fab fa-tiktok"></i> TikTok (Peko)
+                </a>
+
+                <a href="https://t.me" target="_blank" class="social-btn">
+                    <i class="fab fa-telegram-plane"></i> Telegram (Peko Bryant)
+                </a>
+
+                <a href="https://youtube.com/@PekoBryant" target="_blank" class="social-btn">
+                    <i class="fab fa-youtube"></i> YouTube (@PekoBryant)
+                </a>
+
+            </div>
         </div>
 
-        <footer id="footer">
-            <p class="foot" style="text-align: center;">
-                Copyright © <br> 2024-2026 <b>PEWEE P. BRYANT</b> All rights reserved.
-            </p>
+        <footer>
+            <p>Copyright © 2024-2026 <b>PEWEE P. BRYANT</b>. All rights reserved.</p>
         </footer>
-    </div> 
+    </div>
+
 </body>
 </html>
