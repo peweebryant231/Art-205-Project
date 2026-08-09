@@ -3,27 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Pewee P. Bryant</title>
+    <title>About Me | Pewee P. Bryant</title>
     <link rel="stylesheet" type="text/css" href="starz.css.css">
+    
+    <style>
+        body {
+            /* Background image setup */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('pewee.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Displays the full picture wide in the center */
+        .featured-photo {
+            width: 100%;             /* Stretches full width of the container */
+            height: auto;            /* Keeps natural image proportions */
+            border-radius: 12px;     /* Rounded edges */
+            border: 2px solid #00d2ff;
+            margin: 20px 0;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        a {
+            color: #00d2ff;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            background-color: #00d2ff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn a {
+            color: #000;
+        }
+    </style>
 </head>
-<body style="background-color: black; color: white;">
+<body>
     <div id="container">
         <header>
             <div class="menu">
-                <a href="index.html">Home</a>
                 <a href="peko2.html">About Me</a>
-                <a href="peko3contact.html">Contact Us</a>
             </div>
         </header>
 
-        <h1 style="text-align: center; color: aqua;"><i>GET IN TOUCH</i></h1>
+        <h1><i><marquee>PEWEE P. BRYANT</marquee></i></h1>
 
-        <div class="content" style="text-align: center; padding: 40px;">
-            <p style="font-size: 24px;">For collaborations, bookings, or inquiries:</p>
-            
-            <div style="margin-top: 30px; font-size: 20px;">
-                <p><b>Email:</b> <a href="mailto:pekobryant942@gmail.com" style="color: aqua;">pekobryant942@gmail.com</a></p>
-                <p><b>Phone:</b> +231778675965 or +231888756909</p>
-                <p><b>WhatsApp:</b> +231778675965</p>
-            </div>
+        <div class="content">
+            <!-- Full Center Photo -->
+            <img src="pewee.jpg" alt="Pewee P. Bryant" class="featured-photo">
+
+            <p>
+                I'm PEWEE P. BRYANT, I was born July 24, 2003. <br> 
+                I am a content creator and also a videographer. <br>
+                Am also the C.E.O of XTREMEBROTHERHOOD ORGANIZATION (Org). <br>
+                A student of STARZ UNIVERSITY, studying INFORMATION Technology (IT) with concentration in SYSTEM ADMINISTRATION. <br>
+                I love being myself when am at work. Currently residing in Caldwell.
+            </p>
         </div>
+
+        <div class="btn-container">
+            <button class="btn">
+                <a href="peko3contact.html" style="text-decoration:none;">VISIT ME Mr. BRYANT</a>
+            </button>
+        </div>
+
+        <footer id="footer">
+            <p class="foot" style="text-align: center;">
+                Copyright © <br> 2024-2026 <b>PEWEE P. BRYANT</b> All rights reserved.
+            </p>
+        </footer>
+    </div> 
+</body>
+</html>
